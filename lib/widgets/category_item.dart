@@ -16,9 +16,12 @@ class CategoryItem extends StatelessWidget {
     );
   }
 
-  const CategoryItem(
-      {Key? key, required this.title, required this.color, required this.id})
-      : super(key: key);
+  const CategoryItem({
+    Key key,
+    @required this.id,
+    @required this.title,
+    this.color = Colors.orange,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
